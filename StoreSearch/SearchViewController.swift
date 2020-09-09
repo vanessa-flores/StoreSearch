@@ -35,7 +35,11 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResults.count
+        if searchResults.count == 0 {
+            return 1
+        } else {
+            return searchResults.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,9 +51,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         }
         
-        let searchResult = searchResults[indexPath.row]
-        cell.textLabel!.text = searchResult.name
-        cell.detailTextLabel!.text = searchResult.artistName
+        if searchResults.count == 0 {
+            cell.textLabel!.text = "(Nothing found)"
+            cell.detailTextLabel!.text = ""
+        } else {
+            let searchResult = searchResults[indexPath.row]
+            cell.textLabel!.text = searchResult.name
+            cell.detailTextLabel!.text = searchResult.artistName
+        }
         
         return cell
     }
@@ -63,11 +72,13 @@ extension SearchViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         searchResults = []
         
-        for i in 0...2 {
-            let searchResult = SearchResult()
-            searchResult.name = String(format: "Fake Result %d for", i)
-            searchResult.artistName = searchBar.text!
-            searchResults.append(searchResult)
+        if searchBar.text! != "robert dinero" {
+            for i in 0...2 {
+                let searchResult = SearchResult()
+                searchResult.name = String(format: "Fake Result %d for", i)
+                searchResult.artistName = searchBar.text!
+                searchResults.append(searchResult)
+            }
         }
         
         tableView.reloadData()
