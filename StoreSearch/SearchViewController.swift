@@ -18,6 +18,7 @@ class SearchViewController: UIViewController {
     // MARK: - Properties
     
     var searchResults: [SearchResult] = []
+    var hasSearched: Bool = false
     
     // MARK: - Lifecycle
 
@@ -35,7 +36,9 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchResults.count == 0 {
+        if !hasSearched {
+            return 0
+        } else if searchResults.count == 0 {
             return 1
         } else {
             return searchResults.count
@@ -81,6 +84,7 @@ extension SearchViewController: UISearchBarDelegate {
             }
         }
         
+        hasSearched = true
         tableView.reloadData()
     }
     
