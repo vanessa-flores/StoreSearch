@@ -14,6 +14,7 @@
 		A33FEE41250942DC00316B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33FEE40250942DC00316B54 /* Assets.xcassets */; };
 		A33FEE44250942DC00316B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33FEE42250942DC00316B54 /* LaunchScreen.storyboard */; };
 		A33FEE4D250952B600316B54 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FEE4C250952B600316B54 /* SearchResult.swift */; };
+		A373548F250960110079B676 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A373548E250960110079B676 /* SearchResultCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A33FEE45250942DC00316B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33FEE4B2509437100316B54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A33FEE4C250952B600316B54 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		A373548E250960110079B676 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				A373548825095F8C0079B676 /* Application Delegate */,
 				A373548A25095F9F0079B676 /* View Controllers */,
+				A373548D25095FDF0079B676 /* Views */,
 				A373548925095F960079B676 /* Storyboards */,
 				A373548C25095FAF0079B676 /* Models */,
 				A373548B25095FA60079B676 /* Assets */,
@@ -110,6 +113,14 @@
 				A33FEE4C250952B600316B54 /* SearchResult.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A373548D25095FDF0079B676 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A373548E250960110079B676 /* SearchResultCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			files = (
 				A33FEE44250942DC00316B54 /* LaunchScreen.storyboard in Resources */,
 				A33FEE41250942DC00316B54 /* Assets.xcassets in Resources */,
+				A373548F250960110079B676 /* SearchResultCell.xib in Resources */,
 				A33FEE3F250942DA00316B54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
