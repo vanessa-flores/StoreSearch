@@ -16,6 +16,7 @@
 		A33FEE4D250952B600316B54 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FEE4C250952B600316B54 /* SearchResult.swift */; };
 		A373548F250960110079B676 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A373548E250960110079B676 /* SearchResultCell.xib */; };
 		A3735491250965570079B676 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3735490250965570079B676 /* SearchResultCell.swift */; };
+		A3735493250967AA0079B676 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3735492250967AA0079B676 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A33FEE4C250952B600316B54 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		A373548E250960110079B676 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		A3735490250965570079B676 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		A3735492250967AA0079B676 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				A373548E250960110079B676 /* SearchResultCell.xib */,
 				A3735490250965570079B676 /* SearchResultCell.swift */,
+				A3735492250967AA0079B676 /* NothingFoundCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				A33FEE44250942DC00316B54 /* LaunchScreen.storyboard in Resources */,
 				A33FEE41250942DC00316B54 /* Assets.xcassets in Resources */,
 				A373548F250960110079B676 /* SearchResultCell.xib in Resources */,
+				A3735493250967AA0079B676 /* NothingFoundCell.xib in Resources */,
 				A33FEE3F250942DA00316B54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
