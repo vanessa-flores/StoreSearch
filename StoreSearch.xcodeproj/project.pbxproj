@@ -52,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				A33FEE36250942DA00316B54 /* StoreSearch */,
+				A33FEE4B2509437100316B54 /* README.md */,
 				A33FEE35250942DA00316B54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +76,6 @@
 				A37354962511750F0079B676 /* Utils */,
 				A373548B25095FA60079B676 /* Assets */,
 				A33FEE45250942DC00316B54 /* Info.plist */,
-				A33FEE4B2509437100316B54 /* README.md */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
