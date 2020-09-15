@@ -16,6 +16,10 @@ class SearchResultCell: UITableViewCell {
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var artworkImageView: UIImageView!
     
+    // MARK: - Properties
+    
+    var downloadTask: URLSessionDownloadTask?
+    
     // MARK: - Lifecycle
 
     override func awakeFromNib() {
@@ -41,6 +45,12 @@ class SearchResultCell: UITableViewCell {
             artistNameLabel.text = "Unknown"
         } else {
             artistNameLabel.text = String(format: "%@ (%@)", result.artist, result.type)
+        }
+        
+        artworkImageView.image = UIImage(named: "Placeholder")
+        
+        if let smallURL = URL(string: result.imageSmall!) {
+            downloadTask = artworkImageView.loadImage(url: smallURL)
         }
     }
 
