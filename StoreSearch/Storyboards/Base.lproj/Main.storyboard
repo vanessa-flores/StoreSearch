@@ -23,6 +23,28 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3by-ST-dax"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" id="fAw-Ae-U1o">
+                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="o02-4M-avu">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="YYb-E9-F0H">
+                                            <rect key="frame" x="37.5" y="5.5" width="300" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Music"/>
+                                                <segment title="Software"/>
+                                                <segment title="E-books"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ale-zd-4aQ"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <searchBar contentMode="redraw" placeholder="App name, artist, song, album, e-book" translatesAutoresizingMaskIntoConstraints="NO" id="sbB-cu-VVk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -37,6 +59,7 @@
                             <constraint firstItem="6sO-OY-eEV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Has-h5-GTi"/>
                             <constraint firstItem="sbB-cu-VVk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JPB-e0-rjL"/>
                             <constraint firstItem="6sO-OY-eEV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oew-R6-uS4"/>
+                            <constraint firstItem="fAw-Ae-U1o" firstAttribute="top" secondItem="sbB-cu-VVk" secondAttribute="bottom" id="RPe-XW-Jli"/>
                             <constraint firstItem="sbB-cu-VVk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c2s-Yl-VVu"/>
                             <constraint firstItem="6sO-OY-eEV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="po3-FQ-iW8"/>
                             <constraint firstItem="6sO-OY-eEV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wg0-8J-WWh"/>
@@ -45,6 +68,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="sbB-cu-VVk" id="cCp-YP-b99"/>
+                        <outlet property="segmentedControl" destination="YYb-E9-F0H" id="vnx-aa-BZQ"/>
                         <outlet property="tableView" destination="6sO-OY-eEV" id="Kfv-wB-wB6"/>
                     </connections>
                 </viewController>
