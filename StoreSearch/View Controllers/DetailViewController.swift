@@ -28,8 +28,8 @@ class DetailViewController: UIViewController {
     // MARK: - Properties
     
     var searchResult: SearchResult!
-    var downloadTask: URLSessionDownloadTask?
-    var dismissStyle: AnimationStyle = .fade
+    private var downloadTask: URLSessionDownloadTask?
+    private var dismissStyle: AnimationStyle = .fade
     
     // MARK: - Initialization
     

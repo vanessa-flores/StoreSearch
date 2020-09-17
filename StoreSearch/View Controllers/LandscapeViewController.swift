@@ -15,6 +15,13 @@ class LandscapeViewController: UIViewController {
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var pageControl: UIPageControl!
     
+    // MARK: - Properties
+    
+    var searchResults: [SearchResult] = []
+    private var firstTime = true
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +33,71 @@ class LandscapeViewController: UIViewController {
         
         scrollView.removeConstraints(scrollView.constraints)
         scrollView.translatesAutoresizingMaskIntoConstraints = true
+        
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        let safeFrame = view.safeAreaLayoutGuide.layoutFrame
+        scrollView.frame = safeFrame
+        pageControl.frame = CGRect(x: safeFrame.origin.x, y: safeFrame.size.height - pageControl.frame.size.height, width: safeFrame.size.width, height: pageControl.frame.size.height)
+        
+        if firstTime {
+            firstTime = false
+            tileButtons(searchResults)
+        }
+    }
+    
+    // MARK: - Helpers
+    
+    private func tileButtons(_ searchResults: [SearchResult]) {
+        var columnsPerPage = 6
+        var rowsPerPage = 3
+        var itemWidth: CGFloat = 94
+        var itemHeight: CGFloat = 88
+        var marginX: CGFloat = 2
+        var marginY: CGFloat = 20
+        
+        let viewWidth = scrollView.bounds.size.width
+        
+        switch viewWidth {
+        case 568:
+            // 4-inch device
+            break
+        case 667:
+            // 4.7-inch device
+            columnsPerPage = 7
+            itemWidth = 95
+            itemHeight = 98
+            marginX = 1
+            marginY = 29
+        case 736:
+            // 5.5-inch device
+            columnsPerPage = 8
+            rowsPerPage = 4
+            itemWidth = 92
+            marginX = 0
+        case 724:
+            // 4.7-inch device
+            columnsPerPage = 8
+            rowsPerPage = 3
+            itemWidth = 90
+            itemHeight = 98
+            marginX = 2
+            marginY = 29
+        default:
+            break
+        }
+        
+        // TODO: more to come here
+        
+        // Button size
+        let buttonWidth: CGFloat = 82
+        let buttonHeight: CGFloat = 82
+        let paddingHorizontal = (itemWidth - buttonWidth) / 2
+        let paddingVertical = (itemHeight - buttonHeight) / 2
     }
     
 }

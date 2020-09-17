@@ -26,12 +26,12 @@ class SearchViewController: UIViewController {
     
     // MARK: - Properties
     
-    var searchResults: [SearchResult] = []
-    var hasSearched: Bool = false
-    var isLoading: Bool = false
-    var dataTask: URLSessionDataTask?
-    var observer: Any!
-    var landscapeVC: LandscapeViewController?
+    private var searchResults: [SearchResult] = []
+    private var hasSearched: Bool = false
+    private var isLoading: Bool = false
+    private var dataTask: URLSessionDataTask?
+    private var observer: Any!
+    private var landscapeVC: LandscapeViewController?
     
     // MARK: - Lifecycle
 
@@ -151,6 +151,7 @@ class SearchViewController: UIViewController {
         landscapeVC = storyboard!.instantiateViewController(withIdentifier: "LandscapeViewController") as? LandscapeViewController
         
         if let controller = landscapeVC {
+            controller.searchResults = searchResults
             controller.view.frame = view.bounds
             controller.view.alpha = 0
             
