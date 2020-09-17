@@ -20,6 +20,7 @@
 		A37354982511753D0079B676 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37354972511753D0079B676 /* UIImageView+DownloadImage.swift */; };
 		A373549A25129F6A0079B676 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373549925129F6A0079B676 /* DetailViewController.swift */; };
 		A373549C2512A3970079B676 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373549B2512A3970079B676 /* DimmingPresentationController.swift */; };
+		A373549E2513B6180079B676 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373549D2513B6180079B676 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		A37354972511753D0079B676 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		A373549925129F6A0079B676 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A373549B2512A3970079B676 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		A373549D2513B6180079B676 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				A3735490250965570079B676 /* SearchResultCell.swift */,
 				A3735492250967AA0079B676 /* NothingFoundCell.xib */,
 				A3735494250AD6D70079B676 /* LoadingCell.xib */,
+				A373549D2513B6180079B676 /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				A33FEE3A250942DA00316B54 /* SceneDelegate.swift in Sources */,
 				A3735491250965570079B676 /* SearchResultCell.swift in Sources */,
 				A373549A25129F6A0079B676 /* DetailViewController.swift in Sources */,
+				A373549E2513B6180079B676 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
