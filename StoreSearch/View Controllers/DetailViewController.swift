@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
     // MARK: - Properties
     
     var searchResult: SearchResult!
+    var downloadTask: URLSessionDownloadTask?
     
     // MARK: - Initialization
     
@@ -92,6 +93,14 @@ class DetailViewController: UIViewController {
         }
         
         priceButton.setTitle(priceText, for: .normal)
+        
+        if let largeURL = URL(string: searchResult.imageLarge!) {
+            downloadTask = artworkImageView.loadImage(url: largeURL)
+        }
+    }
+    
+    deinit {
+        downloadTask?.cancel()
     }
 
 }
