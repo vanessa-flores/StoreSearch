@@ -22,6 +22,7 @@
 		A373549C2512A3970079B676 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373549B2512A3970079B676 /* DimmingPresentationController.swift */; };
 		A373549E2513B6180079B676 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373549D2513B6180079B676 /* GradientView.swift */; };
 		A37354A02513BF300079B676 /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373549F2513BF300079B676 /* BounceAnimationController.swift */; };
+		A37354A22513C4320079B676 /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37354A12513C4320079B676 /* SlideOutAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		A373549B2512A3970079B676 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
 		A373549D2513B6180079B676 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A373549F2513BF300079B676 /* BounceAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
+		A37354A12513C4320079B676 /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				A373549925129F6A0079B676 /* DetailViewController.swift */,
 				A373549B2512A3970079B676 /* DimmingPresentationController.swift */,
 				A373549F2513BF300079B676 /* BounceAnimationController.swift */,
+				A37354A12513C4320079B676 /* SlideOutAnimationController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				A33FEE4D250952B600316B54 /* SearchResult.swift in Sources */,
 				A33FEE3A250942DA00316B54 /* SceneDelegate.swift in Sources */,
 				A3735491250965570079B676 /* SearchResultCell.swift in Sources */,
+				A37354A22513C4320079B676 /* SlideOutAnimationController.swift in Sources */,
 				A373549A25129F6A0079B676 /* DetailViewController.swift in Sources */,
 				A373549E2513B6180079B676 /* GradientView.swift in Sources */,
 			);
