@@ -31,6 +31,7 @@ class SearchViewController: UIViewController {
     var isLoading: Bool = false
     var dataTask: URLSessionDataTask?
     var observer: Any!
+    var landscapeVC: LandscapeViewController?
     
     // MARK: - Lifecycle
 
@@ -62,6 +63,19 @@ class SearchViewController: UIViewController {
         super.viewWillAppear(animated)
         
         listenForFontChange()
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
+        
+        switch newCollection.verticalSizeClass {
+        case .compact:
+            showLandscape(with: coordinator)
+        case .regular, .unspecified:
+            hideLandscape(with: coordinator)
+        @unknown default:
+            fatalError()
+        }
     }
     
     // MARK: - Actions
@@ -129,6 +143,39 @@ class SearchViewController: UIViewController {
     
     deinit {
         NotificationCenter.default.removeObserver(observer)
+    }
+    
+    private func showLandscape(with coordinator: UIViewControllerTransitionCoordinator) {
+        guard landscapeVC == nil else { return }
+        
+        landscapeVC = storyboard!.instantiateViewController(withIdentifier: "LandscapeViewController") as? LandscapeViewController
+        
+        if let controller = landscapeVC {
+            controller.view.frame = view.bounds
+            controller.view.alpha = 0
+            
+            view.addSubview(controller.view)
+            addChild(controller)
+            coordinator.animate(alongsideTransition: { _ in
+                controller.view.alpha = 1
+                self.searchBar.resignFirstResponder()
+            }, completion: { _ in
+                controller.didMove(toParent: self)
+            })
+        }
+    }
+    
+    private func hideLandscape(with coordinator: UIViewControllerTransitionCoordinator) {
+        if let controller = landscapeVC {
+            controller.willMove(toParent: nil)
+            coordinator.animate(alongsideTransition: { _ in
+                controller.view.alpha = 0
+            }, completion: { _ in
+                controller.view.removeFromSuperview()
+                controller.removeFromParent()
+                self.landscapeVC = nil
+            })
+        }
     }
     
     // MARK: - Navigation
