@@ -117,10 +117,10 @@
 				A373549F2513BF300079B676 /* BounceAnimationController.swift */,
 				A373549925129F6A0079B676 /* DetailViewController.swift */,
 				A373549B2512A3970079B676 /* DimmingPresentationController.swift */,
+				A37354A5251419A00079B676 /* FadeOutAnimationController.swift */,
 				A37354A325140D100079B676 /* LandscapeViewController.swift */,
 				A33FEE3B250942DA00316B54 /* SearchViewController.swift */,
 				A37354A12513C4320079B676 /* SlideOutAnimationController.swift */,
-				A37354A5251419A00079B676 /* FadeOutAnimationController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
