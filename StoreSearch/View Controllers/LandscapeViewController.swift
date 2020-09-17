@@ -9,22 +9,23 @@
 import UIKit
 
 class LandscapeViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.removeConstraints(view.constraints)
+        view.translatesAutoresizingMaskIntoConstraints = true
+        
+        pageControl.removeConstraints(pageControl.constraints)
+        pageControl.translatesAutoresizingMaskIntoConstraints = true
+        
+        scrollView.removeConstraints(scrollView.constraints)
+        scrollView.translatesAutoresizingMaskIntoConstraints = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
