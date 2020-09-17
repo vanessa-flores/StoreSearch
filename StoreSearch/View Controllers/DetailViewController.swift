@@ -20,12 +20,20 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var genreLabel: UILabel!
     @IBOutlet private weak var priceButton: UIButton!
     
+    // MARK: - Properties
+    
+    var searchResult: SearchResult!
+    
+    // MARK: - Initialization
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         modalPresentationStyle = .custom
         transitioningDelegate = self
     }
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +46,46 @@ class DetailViewController: UIViewController {
         gestureRecognizer.cancelsTouchesInView = false
         gestureRecognizer.delegate = self
         view.addGestureRecognizer(gestureRecognizer)
+        
+        if searchResult != nil {
+            updateUI()
+        }
     }
     
     // MARK: - Actions
     
     @IBAction private func close() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Helpers
+    
+    private func updateUI() {
+        nameLabel.text = searchResult.name
+        
+        if searchResult.artist.isEmpty {
+            artistNameLabel.text = "Unknown"
+        } else {
+            artistNameLabel.text = searchResult.artist
+        }
+        
+        kindLabel.text = searchResult.type
+        genreLabel.text = searchResult.genre
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = searchResult.currency
+        
+        let priceText: String
+        if searchResult.price == 0 {
+            priceText = "Free"
+        } else if let text = formatter.string(from: searchResult.price as NSNumber) {
+            priceText = text
+        } else {
+            priceText = ""
+        }
+        
+        priceButton.setTitle(priceText, for: .normal)
     }
 
 }
