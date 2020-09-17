@@ -18,6 +18,8 @@
 		A3735493250967AA0079B676 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3735492250967AA0079B676 /* NothingFoundCell.xib */; };
 		A3735495250AD6D70079B676 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3735494250AD6D70079B676 /* LoadingCell.xib */; };
 		A37354982511753D0079B676 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37354972511753D0079B676 /* UIImageView+DownloadImage.swift */; };
+		A373549A25129F6A0079B676 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373549925129F6A0079B676 /* DetailViewController.swift */; };
+		A373549C2512A3970079B676 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373549B2512A3970079B676 /* DimmingPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		A3735492250967AA0079B676 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		A3735494250AD6D70079B676 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		A37354972511753D0079B676 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		A373549925129F6A0079B676 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A373549B2512A3970079B676 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				A33FEE3B250942DA00316B54 /* SearchViewController.swift */,
+				A373549925129F6A0079B676 /* DetailViewController.swift */,
+				A373549B2512A3970079B676 /* DimmingPresentationController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -216,9 +222,11 @@
 				A33FEE3C250942DA00316B54 /* SearchViewController.swift in Sources */,
 				A33FEE38250942DA00316B54 /* AppDelegate.swift in Sources */,
 				A37354982511753D0079B676 /* UIImageView+DownloadImage.swift in Sources */,
+				A373549C2512A3970079B676 /* DimmingPresentationController.swift in Sources */,
 				A33FEE4D250952B600316B54 /* SearchResult.swift in Sources */,
 				A33FEE3A250942DA00316B54 /* SceneDelegate.swift in Sources */,
 				A3735491250965570079B676 /* SearchResultCell.swift in Sources */,
+				A373549A25129F6A0079B676 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
