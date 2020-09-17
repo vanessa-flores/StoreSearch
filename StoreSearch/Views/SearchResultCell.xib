@@ -18,33 +18,33 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="5mT-NB-srL">
                         <rect key="frame" x="16" y="10" width="60" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="70Q-2s-Unh"/>
-                            <constraint firstAttribute="height" constant="60" id="IYz-lA-6oo"/>
+                            <constraint firstAttribute="width" constant="60" id="nY3-z7-b6O"/>
+                            <constraint firstAttribute="height" constant="60" id="zeY-av-RHk"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIL-l3-YvF">
-                        <rect key="frame" x="84" y="16" width="275" height="22"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIL-l3-YvF">
+                        <rect key="frame" x="84" y="16" width="275" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCG-3Q-BU4">
-                        <rect key="frame" x="84" y="44" width="275" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <rect key="frame" x="84" y="40.5" width="275" height="23.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="eCG-3Q-BU4" firstAttribute="top" secondItem="PIL-l3-YvF" secondAttribute="bottom" constant="6" id="1xe-n8-9vv"/>
-                    <constraint firstAttribute="trailing" secondItem="PIL-l3-YvF" secondAttribute="trailing" constant="16" id="3cj-Ec-UeC"/>
-                    <constraint firstAttribute="trailing" secondItem="eCG-3Q-BU4" secondAttribute="trailing" constant="16" id="SNz-Zk-BH0"/>
-                    <constraint firstItem="5mT-NB-srL" firstAttribute="top" secondItem="h0D-bu-eTA" secondAttribute="top" constant="10" id="TmQ-jm-au4"/>
-                    <constraint firstItem="eCG-3Q-BU4" firstAttribute="leading" secondItem="5mT-NB-srL" secondAttribute="trailing" constant="8" id="Vnl-Rr-whf"/>
-                    <constraint firstItem="PIL-l3-YvF" firstAttribute="top" secondItem="h0D-bu-eTA" secondAttribute="top" constant="16" id="WsN-xP-4r1"/>
-                    <constraint firstItem="5mT-NB-srL" firstAttribute="leading" secondItem="h0D-bu-eTA" secondAttribute="leading" constant="16" id="gQf-nb-AQH"/>
-                    <constraint firstAttribute="bottom" secondItem="eCG-3Q-BU4" secondAttribute="bottom" constant="18" id="jCJ-m0-KAr"/>
-                    <constraint firstItem="PIL-l3-YvF" firstAttribute="leading" secondItem="5mT-NB-srL" secondAttribute="trailing" constant="8" id="qrA-yI-3ud"/>
+                    <constraint firstItem="5mT-NB-srL" firstAttribute="centerY" secondItem="h0D-bu-eTA" secondAttribute="centerY" id="43W-s2-WPy"/>
+                    <constraint firstItem="eCG-3Q-BU4" firstAttribute="leading" secondItem="5mT-NB-srL" secondAttribute="trailing" constant="8" id="69I-0B-doo"/>
+                    <constraint firstAttribute="trailing" secondItem="PIL-l3-YvF" secondAttribute="trailing" constant="16" id="JtN-Qs-nvI"/>
+                    <constraint firstAttribute="trailing" secondItem="eCG-3Q-BU4" secondAttribute="trailing" constant="16" id="S3H-1j-IhO"/>
+                    <constraint firstItem="PIL-l3-YvF" firstAttribute="top" secondItem="h0D-bu-eTA" secondAttribute="top" constant="16" id="Uus-9t-5NB"/>
+                    <constraint firstItem="PIL-l3-YvF" firstAttribute="leading" secondItem="5mT-NB-srL" secondAttribute="trailing" constant="8" id="X6S-cc-diR"/>
+                    <constraint firstItem="5mT-NB-srL" firstAttribute="leading" secondItem="h0D-bu-eTA" secondAttribute="leading" constant="16" id="hNs-gU-yOJ"/>
+                    <constraint firstAttribute="bottom" secondItem="eCG-3Q-BU4" secondAttribute="bottom" constant="16" id="k86-5h-XLq"/>
+                    <constraint firstItem="eCG-3Q-BU4" firstAttribute="top" secondItem="PIL-l3-YvF" secondAttribute="bottom" constant="4" id="pvz-eP-XBp"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

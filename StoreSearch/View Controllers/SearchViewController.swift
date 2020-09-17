@@ -30,6 +30,7 @@ class SearchViewController: UIViewController {
     var hasSearched: Bool = false
     var isLoading: Bool = false
     var dataTask: URLSessionDataTask?
+    var observer: Any!
     
     // MARK: - Lifecycle
 
@@ -55,6 +56,12 @@ class SearchViewController: UIViewController {
         segmentedControl.setTitleTextAttributes(normalTextAttributes, for: .normal)
         segmentedControl.setTitleTextAttributes(selectedTextAttributes, for: .selected)
         segmentedControl.setTitleTextAttributes(selectedTextAttributes, for: .highlighted)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        listenForFontChange()
     }
     
     // MARK: - Actions
@@ -108,6 +115,20 @@ class SearchViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func listenForFontChange() {
+        observer = NotificationCenter.default.addObserver(forName: UIContentSizeCategory.didChangeNotification, object: nil, queue: OperationQueue.main, using: { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            
+            self.tableView.reloadData()
+        })
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(observer)
     }
     
     // MARK: - Navigation
