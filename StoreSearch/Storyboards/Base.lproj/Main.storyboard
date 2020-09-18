@@ -29,7 +29,7 @@
                                 <items>
                                     <navigationItem id="o02-4M-avu">
                                         <nil key="title"/>
-                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="YYb-E9-F0H">
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="YYb-E9-F0H">
                                             <rect key="frame" x="183.5" y="0.0" width="300" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
@@ -108,6 +108,7 @@
                     <connections>
                         <outlet property="pageControl" destination="SmC-em-HGs" id="Y8m-DU-3j1"/>
                         <outlet property="scrollView" destination="7TR-BS-CTT" id="2KG-LK-Tbe"/>
+                        <segue destination="9y8-8x-0Tk" kind="presentation" identifier="ShowDetail" id="pVn-3o-2go"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVN-CY-ELu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -235,9 +236,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAb-J3-0Eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="100.29985007496252"/>
+            <point key="canvasLocation" x="997" y="100"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pVn-3o-2go"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="CloseButton" width="15" height="15"/>
         <image name="PriceButton" width="11" height="24"/>

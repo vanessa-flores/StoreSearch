@@ -63,6 +63,12 @@ class LandscapeViewController: UIViewController {
         }
     }
     
+    // MARK: - Actions
+    
+    @objc func buttonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "ShowDetail", sender: sender)
+    }
+    
     // MARK: - Helpers
     
     private func tileButtons(_ searchResults: [SearchResult]) {
@@ -103,9 +109,7 @@ class LandscapeViewController: UIViewController {
         default:
             break
         }
-        
-        // TODO: more to come here
-        
+                
         // Button size
         let buttonWidth: CGFloat = 82
         let buttonHeight: CGFloat = 82
@@ -117,8 +121,10 @@ class LandscapeViewController: UIViewController {
         var column = 0
         var x = marginX
         
-        for (_, result) in searchResults.enumerated() {
+        for (index, result) in searchResults.enumerated() {
             let button = UIButton(type: .custom)
+            button.tag = 2000 + index
+            button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
             button.setBackgroundImage(UIImage(named: "LandscapeButton"), for: .normal)
             downloadImage(for: result, andPlaceOn: button)
             
@@ -198,6 +204,18 @@ class LandscapeViewController: UIViewController {
     deinit {
         for task in downloads {
             task.cancel()
+        }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            if case .results(let list) = search.state {
+                let detailViewController = segue.destination as! DetailViewController
+                let searchResult = list[(sender as! UIButton).tag - 2000]
+                detailViewController.searchResult = searchResult
+            }
         }
     }
     
