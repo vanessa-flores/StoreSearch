@@ -91,6 +91,7 @@ class SearchViewController: UIViewController {
                 }
                 
                 self.tableView.reloadData()
+                self.landscapeVC?.searchResultsReceived()
             })
             
             tableView.reloadData()
