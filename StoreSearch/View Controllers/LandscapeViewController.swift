@@ -19,6 +19,7 @@ class LandscapeViewController: UIViewController {
     
     var searchResults: [SearchResult] = []
     private var firstTime = true
+    private var downloads: [URLSessionDownloadTask] = []
     
     // MARK: - Lifecycle
     
@@ -106,10 +107,10 @@ class LandscapeViewController: UIViewController {
         var column = 0
         var x = marginX
         
-        for (index, result) in searchResults.enumerated() {
-            let button = UIButton(type: .system)
-            button.backgroundColor = UIColor.white
-            button.setTitle("\(index)", for: .normal)
+        for (_, result) in searchResults.enumerated() {
+            let button = UIButton(type: .custom)
+            button.setBackgroundImage(UIImage(named: "LandscapeButton"), for: .normal)
+            downloadImage(for: result, andPlaceOn: button)
             
             button.frame = CGRect(x: x + paddingHorizontal,
                                   y: marginY + CGFloat(row) * itemHeight + paddingVertical,
@@ -139,6 +140,29 @@ class LandscapeViewController: UIViewController {
         
         pageControl.numberOfPages = numberOfPages
         pageControl.currentPage = 0
+    }
+    
+    private func downloadImage(for searchResult: SearchResult, andPlaceOn button: UIButton) {
+        if let url = URL(string: searchResult.imageSmall!) {
+            let task = URLSession.shared.downloadTask(with: url) { [weak button] url, response, error in
+                
+                if error == nil, let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        if let button = button {
+                            button.setImage(image, for: .normal)
+                        }
+                    }
+                }
+            }
+            task.resume()
+            downloads.append(task)
+        }
+    }
+    
+    deinit {
+        for task in downloads {
+            task.cancel()
+        }
     }
     
 }
