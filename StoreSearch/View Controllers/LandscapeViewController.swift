@@ -35,6 +35,8 @@ class LandscapeViewController: UIViewController {
         scrollView.translatesAutoresizingMaskIntoConstraints = true
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
+        
+        pageControl.numberOfPages = 0
     }
     
     override func viewWillLayoutSubviews() {
@@ -135,7 +137,27 @@ class LandscapeViewController: UIViewController {
         scrollView.contentSize = CGSize(width: CGFloat(numberOfPages) * viewWidth,
                                         height: scrollView.bounds.size.height)
         
-        print("Number of pages: \(numberOfPages)")
+        pageControl.numberOfPages = numberOfPages
+        pageControl.currentPage = 0
     }
     
+}
+
+// MARK: - UIScrollViewDelegate
+
+extension LandscapeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let width = scrollView.bounds.size.width
+        let page = Int((scrollView.contentOffset.x + width / 2) / width)
+        pageControl.currentPage = page
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func pageChanged(_ sender: UIPageControl) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
+            self.scrollView.contentOffset = CGPoint(x: self.scrollView.bounds.size.width * CGFloat(sender.currentPage), y: 0)
+        }, completion: nil)
+    }
 }
