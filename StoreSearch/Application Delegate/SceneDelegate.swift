@@ -38,6 +38,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        searchViewController.splitViewDetail = detailViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

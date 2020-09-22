@@ -26,6 +26,7 @@ class SearchViewController: UIViewController {
     
     // MARK: - Properties
     
+    weak var splitViewDetail: DetailViewController?
     private let search = Search()
     private var observer: Any!
     private var landscapeVC: LandscapeViewController?
@@ -176,6 +177,7 @@ class SearchViewController: UIViewController {
                 let indexPath = sender as! IndexPath
                 let searchResult = list[indexPath.row]
                 detailViewController.searchResult = searchResult
+                detailViewController.isPopUp = true
             }
         }
     }
@@ -223,8 +225,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        searchBar.resignFirstResponder()
         
-        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+        if view.window?.rootViewController?.traitCollection.horizontalSizeClass == .compact {
+            tableView.deselectRow(at: indexPath, animated: true)
+            performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+        } else {
+            if case .results(let list) = search.state {
+                splitViewDetail?.searchResult = list[indexPath.row]
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
