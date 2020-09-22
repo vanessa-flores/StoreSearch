@@ -26,6 +26,7 @@
 		A37354AA251A4A440079B676 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37354AC251A4A440079B676 /* NothingFoundCell.xib */; };
 		A37354AE251A4C8A0079B676 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37354B0251A4C8A0079B676 /* LoadingCell.xib */; };
 		A37354B5251A4FDC0079B676 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37354B7251A4FDC0079B676 /* SearchResultCell.xib */; };
+		A37354BA251A525F0079B676 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A37354BC251A525F0079B676 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		A37354B2251A4CC30079B676 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LoadingCell.strings; sourceTree = "<group>"; };
 		A37354B4251A4EC20079B676 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
 		A37354B6251A4FDC0079B676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
+		A37354BB251A525F0079B676 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				A37354962511750F0079B676 /* Utils */,
 				A373548B25095FA60079B676 /* Assets */,
 				A33FEE45250942DC00316B54 /* Info.plist */,
+				A37354BC251A525F0079B676 /* Localizable.strings */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33FEE41250942DC00316B54 /* Assets.xcassets in Resources */,
+				A37354BA251A525F0079B676 /* Localizable.strings in Resources */,
 				A37354AE251A4C8A0079B676 /* LoadingCell.xib in Resources */,
 				A37354B5251A4FDC0079B676 /* SearchResultCell.xib in Resources */,
 				A37354AA251A4A440079B676 /* NothingFoundCell.xib in Resources */,
@@ -302,6 +306,14 @@
 				A37354B6251A4FDC0079B676 /* Base */,
 			);
 			name = SearchResultCell.xib;
+			sourceTree = "<group>";
+		};
+		A37354BC251A525F0079B676 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A37354BB251A525F0079B676 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
