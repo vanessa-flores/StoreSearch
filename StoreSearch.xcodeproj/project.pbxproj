@@ -56,6 +56,7 @@
 		A37354B4251A4EC20079B676 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
 		A37354B6251A4FDC0079B676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
 		A37354BB251A525F0079B676 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A37354BD251A53DB0079B676 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +313,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A37354BB251A525F0079B676 /* en */,
+				A37354BD251A53DB0079B676 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
