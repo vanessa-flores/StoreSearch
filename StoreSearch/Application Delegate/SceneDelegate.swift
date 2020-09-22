@@ -9,8 +9,26 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
+    // MARK: - Properties
 
     var window: UIWindow?
+    
+    var splitViewController: UISplitViewController {
+        return window!.rootViewController as! UISplitViewController
+    }
+    
+    var searchViewController: SearchViewController {
+        return splitViewController.viewControllers.first as! SearchViewController
+    }
+    
+    var detailNavigationController: UINavigationController {
+        return splitViewController.viewControllers.last as! UINavigationController
+    }
+    
+    var detailViewController: DetailViewController {
+        return detailNavigationController.topViewController as! DetailViewController
+    }
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -18,6 +36,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
