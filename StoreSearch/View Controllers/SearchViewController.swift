@@ -47,7 +47,9 @@ class SearchViewController: UIViewController {
         cellNib = UINib(nibName: TableView.CellIdentifiers.loadingCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.loadingCell)
         
-        searchBar.becomeFirstResponder()
+        if UIDevice.current.userInterfaceIdiom != .pad {
+            searchBar.becomeFirstResponder()
+        }
         
         let segmentColor = UIColor(red: 10/255, green: 80/255, blue: 80/255, alpha: 1)
         let selectedTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -167,6 +169,14 @@ class SearchViewController: UIViewController {
         }
     }
     
+    private func hideMasterPane() {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.splitViewController!.preferredDisplayMode = .primaryHidden
+        }, completion: { _ in
+            self.splitViewController!.preferredDisplayMode = .automatic
+        })
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -233,6 +243,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             if case .results(let list) = search.state {
                 splitViewDetail?.searchResult = list[indexPath.row]
+            }
+            
+            if splitViewController!.displayMode != .allVisible {
+                hideMasterPane()
             }
         }
     }
