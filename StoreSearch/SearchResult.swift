@@ -68,7 +68,6 @@ class SearchResult: Codable, CustomStringConvertible {
         let kind = self.kind ?? "audiobook"
         
         return typeForKind[kind] ?? kind
-        }        
     }
     
     var artist: String {

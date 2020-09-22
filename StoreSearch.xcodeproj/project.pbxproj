@@ -27,6 +27,7 @@
 		A37354AE251A4C8A0079B676 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37354B0251A4C8A0079B676 /* LoadingCell.xib */; };
 		A37354B5251A4FDC0079B676 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37354B7251A4FDC0079B676 /* SearchResultCell.xib */; };
 		A37354BA251A525F0079B676 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A37354BC251A525F0079B676 /* Localizable.strings */; };
+		A37354C0251A74BE0079B676 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A37354C2251A74BE0079B676 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		A37354B6251A4FDC0079B676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
 		A37354BB251A525F0079B676 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A37354BD251A53DB0079B676 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A37354C1251A74BE0079B676 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A37354C3251A74C20079B676 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 				A373548B25095FA60079B676 /* Assets */,
 				A33FEE45250942DC00316B54 /* Info.plist */,
 				A37354BC251A525F0079B676 /* Localizable.strings */,
+				A37354C2251A74BE0079B676 /* InfoPlist.strings */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -239,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33FEE41250942DC00316B54 /* Assets.xcassets in Resources */,
+				A37354C0251A74BE0079B676 /* InfoPlist.strings in Resources */,
 				A37354BA251A525F0079B676 /* Localizable.strings in Resources */,
 				A37354AE251A4C8A0079B676 /* LoadingCell.xib in Resources */,
 				A37354B5251A4FDC0079B676 /* SearchResultCell.xib in Resources */,
@@ -316,6 +321,15 @@
 				A37354BD251A53DB0079B676 /* nl */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A37354C2251A74BE0079B676 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A37354C1251A74BE0079B676 /* en */,
+				A37354C3251A74C20079B676 /* nl */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
