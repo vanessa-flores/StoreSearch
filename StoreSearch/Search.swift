@@ -94,7 +94,7 @@ class Search {
             "&lang=\(language)&country=\(countryCode)"
         
         let url = URL(string: urlString)
-        print("URL: \(url!)")
+
         return url!
     }
     
