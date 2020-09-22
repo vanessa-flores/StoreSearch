@@ -94,6 +94,24 @@
 				A373548D25095FDF0079B676 /* Views */,
 				A373548925095F960079B676 /* Storyboards */,
 				A37354A925152D850079B676 /* Service */,
+				A33FEE37250942DA00316B54 /* AppDelegate.swift */,
+				A33FEE39250942DA00316B54 /* SceneDelegate.swift */,
+				A373549F2513BF300079B676 /* BounceAnimationController.swift */,
+				A373549925129F6A0079B676 /* DetailViewController.swift */,
+				A373549B2512A3970079B676 /* DimmingPresentationController.swift */,
+				A37354A5251419A00079B676 /* FadeOutAnimationController.swift */,
+				A37354A325140D100079B676 /* LandscapeViewController.swift */,
+				A33FEE3B250942DA00316B54 /* SearchViewController.swift */,
+				A37354A12513C4320079B676 /* SlideOutAnimationController.swift */,
+				A37354B7251A4FDC0079B676 /* SearchResultCell.xib */,
+				A3735490250965570079B676 /* SearchResultCell.swift */,
+				A37354AC251A4A440079B676 /* NothingFoundCell.xib */,
+				A37354B0251A4C8A0079B676 /* LoadingCell.xib */,
+				A373549D2513B6180079B676 /* GradientView.swift */,
+				A33FEE3D250942DA00316B54 /* Main.storyboard */,
+				A37354A725152D740079B676 /* Search.swift */,
+				A33FEE4C250952B600316B54 /* SearchResult.swift */,
+				A37354972511753D0079B676 /* UIImageView+DownloadImage.swift */,
 				A373548C25095FAF0079B676 /* Models */,
 				A37354962511750F0079B676 /* Utils */,
 				A373548B25095FA60079B676 /* Assets */,
@@ -106,8 +124,6 @@
 		A373548825095F8C0079B676 /* Application Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				A33FEE37250942DA00316B54 /* AppDelegate.swift */,
-				A33FEE39250942DA00316B54 /* SceneDelegate.swift */,
 			);
 			path = "Application Delegate";
 			sourceTree = "<group>";
@@ -115,7 +131,6 @@
 		A373548925095F960079B676 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				A33FEE3D250942DA00316B54 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -123,13 +138,6 @@
 		A373548A25095F9F0079B676 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A373549F2513BF300079B676 /* BounceAnimationController.swift */,
-				A373549925129F6A0079B676 /* DetailViewController.swift */,
-				A373549B2512A3970079B676 /* DimmingPresentationController.swift */,
-				A37354A5251419A00079B676 /* FadeOutAnimationController.swift */,
-				A37354A325140D100079B676 /* LandscapeViewController.swift */,
-				A33FEE3B250942DA00316B54 /* SearchViewController.swift */,
-				A37354A12513C4320079B676 /* SlideOutAnimationController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -145,7 +153,6 @@
 		A373548C25095FAF0079B676 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A33FEE4C250952B600316B54 /* SearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,11 +160,6 @@
 		A373548D25095FDF0079B676 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A37354B7251A4FDC0079B676 /* SearchResultCell.xib */,
-				A3735490250965570079B676 /* SearchResultCell.swift */,
-				A37354AC251A4A440079B676 /* NothingFoundCell.xib */,
-				A37354B0251A4C8A0079B676 /* LoadingCell.xib */,
-				A373549D2513B6180079B676 /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,7 +167,6 @@
 		A37354962511750F0079B676 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A37354972511753D0079B676 /* UIImageView+DownloadImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -173,7 +174,6 @@
 		A37354A925152D850079B676 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				A37354A725152D740079B676 /* Search.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
