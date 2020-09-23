@@ -121,8 +121,21 @@ class DetailViewController: UIViewController {
         if let largeURL = URL(string: searchResult.imageLarge!) {
             downloadTask = artworkImageView.loadImage(url: largeURL)
         }
+                
+        if popupView.isHidden && !isPopUp {
+            popupView.alpha = 0
+            self.popupView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            popupView.isHidden = false
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.popupView.alpha = 1
+                self.popupView.transform = CGAffineTransform.identity
+            })
+        } else {
+            popupView.isHidden = false
+        }
         
-        popupView.isHidden = false
+        
     }
     
     deinit {
