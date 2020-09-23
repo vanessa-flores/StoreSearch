@@ -6,6 +6,7 @@
 //  Copyright © 2020 Rising Dev Habits. All rights reserved.
 //
 
+import MessageUI
 import UIKit
 
 class DetailViewController: UIViewController {
@@ -141,6 +142,15 @@ class DetailViewController: UIViewController {
     deinit {
         downloadTask?.cancel()
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowMenu" {
+            let controller = segue.destination as! MenuViewController
+            controller.delegate = self
+        }
+    }
 
 }
 
@@ -172,5 +182,31 @@ extension DetailViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         return (touch.view === self.view)
+    }
+}
+
+// MARK: - MenuViewControllerDelegate
+
+extension DetailViewController: MenuViewControllerDelegate {
+    
+    func menuViewControllerSendEmail(_ controller: MenuViewController) {
+        dismiss(animated: true) {
+            if MFMailComposeViewController.canSendMail() {
+                let controller = MFMailComposeViewController()
+                controller.mailComposeDelegate = self
+                controller.setSubject(NSLocalizedString("Support Request", comment: "Email subject"))
+                controller.setToRecipients(["your@email-adress-here.com"])
+                self.present(controller, animated: true, completion: nil)
+            }
+        }
+    }
+}
+
+// MARK: - MFMailComposeViewControllerDelegate
+
+extension DetailViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
     }
 }

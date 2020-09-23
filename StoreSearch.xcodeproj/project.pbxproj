@@ -28,6 +28,7 @@
 		A37354B5251A4FDC0079B676 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37354B7251A4FDC0079B676 /* SearchResultCell.xib */; };
 		A37354BA251A525F0079B676 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A37354BC251A525F0079B676 /* Localizable.strings */; };
 		A37354C0251A74BE0079B676 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A37354C2251A74BE0079B676 /* InfoPlist.strings */; };
+		A37354C8251BFC3E0079B676 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37354C7251BFC3E0079B676 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		A37354BD251A53DB0079B676 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A37354C1251A74BE0079B676 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A37354C3251A74C20079B676 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A37354C7251BFC3E0079B676 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				A373549B2512A3970079B676 /* DimmingPresentationController.swift */,
 				A37354A5251419A00079B676 /* FadeOutAnimationController.swift */,
 				A37354A325140D100079B676 /* LandscapeViewController.swift */,
+				A37354C7251BFC3E0079B676 /* MenuViewController.swift */,
 				A33FEE3B250942DA00316B54 /* SearchViewController.swift */,
 				A37354A12513C4320079B676 /* SlideOutAnimationController.swift */,
 			);
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33FEE3C250942DA00316B54 /* SearchViewController.swift in Sources */,
+				A37354C8251BFC3E0079B676 /* MenuViewController.swift in Sources */,
 				A33FEE38250942DA00316B54 /* AppDelegate.swift in Sources */,
 				A37354982511753D0079B676 /* UIImageView+DownloadImage.swift in Sources */,
 				A373549C2512A3970079B676 /* DimmingPresentationController.swift in Sources */,
