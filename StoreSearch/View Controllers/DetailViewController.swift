@@ -196,6 +196,8 @@ extension DetailViewController: MenuViewControllerDelegate {
                 controller.mailComposeDelegate = self
                 controller.setSubject(NSLocalizedString("Support Request", comment: "Email subject"))
                 controller.setToRecipients(["your@email-adress-here.com"])
+                controller.modalPresentationStyle = .formSheet
+                
                 self.present(controller, animated: true, completion: nil)
             }
         }
